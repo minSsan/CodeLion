@@ -48,8 +48,17 @@
         article.timetable {
             width: 600px;
         }
+        table {
+            table-layout: fixed;
+        }
         table > tbody > tr > td {
             cursor: pointer;
+
+            vertical-align: center;
+
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
     </style>
 </head>
@@ -200,17 +209,38 @@
     <script>
         $(function() {
             $("table tbody tr td").click(function(e) {
-                console.log(e.target);
-                if (e.target.className != "box-edit") {
-                    e.target.className = "box-edit";
-                    e.target.innerHTML = `<input type="text" onkeydown="Enter(this)" value="${e.target.innerHTML}"/>`;
+                console.log(e.target.className);
+                if (e.target.id === "input_sch") {
+                    return;
                 }
-                // else {
-                //     let num1 = Math.floor(Math.random() * 256);
-                //     let num2 = Math.floor(Math.random() * 256);
-                //     let num3 = Math.floor(Math.random() * 256);
-                //     e.target.style.backgroundColor = "rgb(" + num1 + "," + num2 + "," + num3 + ", 0.3)";
-                // }
+                if (e.target.className !== "box-edit") {
+                    // 입력중인 테이블이 존재할 때
+                    if ($("#input_sch")) {
+                        // 입력중인 테이블에 입력값이 존재할 때
+                        if ($("#input_sch").val()) {
+                            let input_val = $("#input_sch").val();
+                            // 테이블 배경색 선택
+                            let num1 = Math.floor(Math.random() * 256);
+                            let num2 = Math.floor(Math.random() * 256);
+                            let num3 = Math.floor(Math.random() * 256);
+                            // 배경색을 입히고, 해당 테이블에 값을 넣음
+                            $(".box-edit").css("background-color", "rgb("+num1+","+num2+","+num3+", 0.3)");
+                            $(".box-edit").addClass("box");
+                            $(".box-edit").empty();
+                            $(".box-edit").text(input_val);
+                            $(".box-edit").removeClass("box-edit");
+                        }
+                        // 입력중인 테이블의 입력값이 공백일 때
+                        else {
+                            $(".box-edit").css("background-color", "inherit");
+                            $(".box-edit").empty();
+                            $(".box-edit").removeClass("box-edit");
+                        }
+                    }
+                    // 입력중인 테이블 명시하고, input 태그 삽입
+                    e.target.className = "box-edit";
+                    e.target.innerHTML = `<input id="input_sch" type="text" onkeydown="Enter(this)" value="${e.target.innerHTML}"/>`;
+                }
             });
         });
 
@@ -219,7 +249,7 @@
                 let num1 = Math.floor(Math.random() * 256);
                 let num2 = Math.floor(Math.random() * 256);
                 let num3 = Math.floor(Math.random() * 256);
-                e.parentNode.style.backgroundColor = "rgb("+num1+","+num2+","+num3+", 0.3)";
+                e.parentNode.style.backgroundColor = e.value ? "rgb("+num1+","+num2+","+num3+", 0.3)" : "inherit";
                 console.log(e.parentNode.classList)
                 e.parentNode.className = "box";
                 e.parentNode.innerHTML = e.value;
