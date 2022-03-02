@@ -55,16 +55,53 @@
             cursor: pointer;
 
             vertical-align: center;
-
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+        }
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
     </style>
 </head>
 <body>
-    <header class="d-table container-fluid">
-        <div class="d-table-cell logo-container">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+        <!-- <div class="d-table-cell logo-container">
             <a href="">LOGO</a>
         </div>
         <nav class="d-table-cell">
@@ -80,7 +117,7 @@
                 </li>
             </ul>
         </nav>
-        <p class="d-table-cell">박민선</p>
+        <p class="d-table-cell">박민선</p> -->
     </header>
     <main>
         <article class="intro">
@@ -112,13 +149,13 @@
                 <tbody>
                     <tr>
                         <th>9:00-10:00</th>
-                        <td>기상 및 밥먹기</td>
-                        <td>기상 및 밥먹기</td>
-                        <td>기상 및 밥먹기</td>
-                        <td>기상 및 밥먹기</td>
-                        <td>기상 및 밥먹기</td>
-                        <td>기상 및 밥먹기</td>
-                        <td>기상 및 밥먹기</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
                     <tr>
                         <th>10:00-11:00</th>
@@ -204,6 +241,14 @@
             </table>
         </article>
     </main>
+    <footer>
+        <div>
+            <h1>멋쟁이 사자처럼 10기</h1>
+        </div>
+        <div>
+            <p>박민선</p>
+        </div>
+    </footer>
     
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script>
