@@ -20,27 +20,209 @@
             margin: 0;
             padding: 0;
         }
-        header, main, article, footer {
-            border: solid 2px #000;
+        main {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        article {
+            margin: 20px auto;
+        }
+        article.intro {
+            width: 500px;
+
             padding: 10px;
+
+            border: 1px solid #737373;
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px #737373;
+        }
+        article.timetable {
+            width: 600px;
+        }
+        table {
+            table-layout: fixed;
+        }
+        table > tbody > tr > td {
+            cursor: pointer;
+
+            vertical-align: center;
+        }
+        footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
     </style>
 </head>
 <body>
     <header>
-        여기는 header
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+        </nav>
     </header>
     <main>
-        여기는 main
         <article class="intro">
-            여기는 자기소개 article 혹은 section
+            <h1>간단한 자기소개</h1>
+            <hr>
+            <p>이름❤ 박민선</p>
+            <p>mbti🧡 ISTP</p>
+            <p>학교💛 한양대학교 ERICA캠퍼스</p>
+            <p>학과💚 소프트웨어학부 컴퓨터전공</p>
+            <p>취미💙 나들이 가기</p>
+            <p>좋아하는 음식💜 일식, 고기 등</p>
         </article>
         <article class="timetable">
-            여기는 시간표 article 혹은 section
+            <h1>나의 시간표</h1>
+            <hr>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>시간</th>
+                        <th>일</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                        <th>토</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>9:00-10:00</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>10:00-11:00</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>11:00-12:00</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>12:00-13:00</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>13:00-14:00</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>14:00-15:00</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>15:00-16:00</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>16:00-17:00</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>17:00-18:00</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </article>
     </main>
     <footer>
-        여기는 footer
+        <div>
+            <h1>멋쟁이 사자처럼 10기</h1>
+        </div>
+        <div>
+            <p>박민선</p>
+        </div>
     </footer>
 </body>
 </html>

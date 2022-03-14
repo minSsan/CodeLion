@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+ul {
+    list-style: none;
+    text-align: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+}
+header {
+    table-layout: fixed;
+    text-align: center;
+}
+main {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+article {
+    margin: 20px auto;
+}
+article.intro {
+    width: 500px;
+
+    padding: 10px;
+
+    border: 1px solid #737373;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #737373;
+}
+article.timetable {
+    width: 600px;
+}
+table {
+    table-layout: fixed;
+}
+table > tbody > tr > td {
+    cursor: pointer;
+
+    vertical-align: center;
+}
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
